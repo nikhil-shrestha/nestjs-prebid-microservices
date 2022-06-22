@@ -7,15 +7,15 @@ import { AppService } from './app.service';
   imports: [
     ClientsModule.register([
       {
-        name: 'BILLING_SERVICE',
+        name: 'PREBID_SERVICE',
         transport: Transport.KAFKA,
         options: {
           client: {
-            clientId: 'billing',
+            clientId: 'prebid',
             brokers: ['localhost:9092'],
           },
           consumer: {
-            groupId: 'billing-consumer',
+            groupId: 'prebid-consumer',
           },
         },
       },
